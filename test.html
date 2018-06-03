@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Document</title>
+    <script>
+        var deviceWidth = document.documentElement.clientWidth;
+        if (deviceWidth > 750) deviceWidth = 750;
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    </script>
+    <style>
+        /* em -> 一个字符的大小，浏览器默认字号是16px */
+        body {
+            font-size: 20px;
+        }
+        .div1 {
+            /* font-size: 2em; */
+            /* font-size: 20px; */
+        }
+        .div1 p {
+            /* em 特点：
+            em单位的实际大小 为当前元素的font-size值，
+            如果当前元素没有修正过font-size，
+            会继承祖先元素的font-size，再进行计算，
+            因为em是尺寸的单位，因此可以应用在任何px所在的场景 */
+            /* font-size: 2em; */
+            width: 10em;
+            height: 10em;
+            background: green;
+        }
+        /* rem -> root em : 根据根节点(html)的font-szie去计算真实尺寸，
+        和当前元素和祖先元素的font-size大小无关 */
+        html {
+            /* font-size: 50px; */
+        }
+        .div1 {
+            font-size: 40px;
+        }
+        .div1 p {
+            font-size: 40px;
+            width: 10rem;
+            height: 10rem;
+            background: green;
+        }
+        .div1 img {
+            width: 54px;
+            height: 71px;
+        }
+        h4 {
+            height: 2rem;
+            background: green;
+        }
+        /* 以后做移动端的项目，尽量用rem或百分比 */
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <p>hello</p>
+    </div>
+    <h4></h4>
+</body>
+</html>

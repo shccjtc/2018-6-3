@@ -1,0 +1,84 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.header {
+    height: .8rem;
+    border-bottom: 1px solid #bababa;
+    position: relative;
+}
+.header h4 {
+    font-size: 16px;
+    text-align: center;
+    line-height: 2;
+
+}
+.header span{
+    position: absolute;
+    left: .2rem;
+    top: 3px;
+    line-height: .8rem;
+}
+
+.main {
+    flex: 1;
+    /* background: darkmagenta; */
+    overflow-y: auto;
+}
+.swiper-slide img{
+    width:100%;
+    height: auto;
+}
+.newslist ul li a{
+    display: block;
+    position: relative;
+}
+.newslist ul li a h4 span{
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+}
+.news-img{
+    display: flex;
+    padding-top: .1rem;
+}
+.news-img span{
+    display: block;
+    flex: 1;
+
+}
+.news-img span img{
+    width: 100%;
+
+}
+.news-img span :nth-child(2){
+    margin: 0 .1rem;
+}
+.arc-list ul li a{
+    display: block;
+    display: flex;
+}
+.arc-list ul li a span{
+    display: block;
+    background: green;
+    flex: .3;
+
+}
+.arc-list ul li a span img{
+    height: auto;
+    width: 100%;
+}
+.arc-list ul li a div{
+    background: blue;
+    flex:.7;
+}
+
+.footer {
+    height: 1rem;
+    background: darkgreen;
+}
+.footer ul li:not(:nth-of-type(3)) {
+    background: url(../img/icon-01.png) center 4px no-repeat;
+    background-size: 25px auto;
+}
